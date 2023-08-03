@@ -118,17 +118,14 @@ Gui(page).run(use_reloader=True, port=5001)
 
 Our values should dynamically correspond to the slider and the result should look like the image below: 
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
+<img src="images/Taipy_picture2.png" height="50%">
 
 
 Pretty sweet. Next, let’s add a bar chart. Charts are incredibly helpful with visualizing data but can be a hassle to build out. With Taipy, the job becomes incredibly simple, even for a Python novice like myself. 
 
 For the sake of this demo, I found a small dataset that displays the average ages for each of the Fifa World Cup 2022 teams to seed my chart. If you want to follow along and use the same data set, you can find it [here](https://www.statista.com/statistics/1298094/average-player-age-national-teams-qatar-world-cup/). 
+
+<img src="images/Taipy_picture3.png" height="50%">
 
 First thing’s first, I’m going to move my average_age.csv into my projects folder. I’m keeping it at the top level for the sake of simplicity but you can move yours wherever you please. Just be sure to note the path correctly in the upcoming steps. 
 
@@ -162,13 +159,7 @@ After importing the pandas library, we’re defining a function that reads our c
 
 Next, we create the chart visual control in our page, passing in our dynamic data value, our x and y labels, and making the chart orientation vertical. Let’s run our code and see the results! 
 
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
+<img src="images/Taipy_picture4.png" height="50%">
 
 That looks amazing, if I do say so myself, and the result was achieved with 5 lines of code.
 
@@ -181,13 +172,7 @@ If you want to play around with more Taipy features, here’s a full list of vis
 
 As you continue to build your application, you may find that you want to further customize the look and feel of your components and layout. Maybe you’ve decided to add 2 more sliders but don’t want to stick with the default formatting. 
 
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
-
+<img src="images/Taipy_picture5.png" height="50%">
 
 I’m not going to lie, I think that looks pretty good. Let’s say, however, that you wanted all of your sliders side by side and each of them to have a different background. 
 
@@ -263,15 +248,9 @@ The first thing you’ll notice is that we’ve added the layout element. Everyt
 
 Next, I’ve placed all of my sliders into container elements, and I’ve also associated each of those container elements with the container-styling CSS class that we wrote earlier. I then labeled each container with an h3 (heading3) that will differentiate each container from the other. Finally, I imported my main.css file into my python file at the bottom of the page, as a Gui property, allowing me to successfully reference and utilize the container-styling class. 
 
-The results should be as pictured: 
+The results should be as pictured.
 
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
-
+<img src="images/Taipy_picture6.png" height="50%">
 
 You can go back and add additional variables to your own code so that each of the sliders can have different dynamic values. For now, you can see that using Taipy’s built in layout element along with containers can come in very handy when it comes to optimizing your application UI. 
 
@@ -350,16 +329,9 @@ As you can see, I placed the file_download button into it’s own container and 
 
 The results should look like this: 
 
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
-
+<img src="images/Taipy_picture7.png" height="50%">
 
 Amazing. We really got so much accomplished in a matter of minutes!
-
 
 ## Recap
 
@@ -370,8 +342,6 @@ You can take what you already know and expand upon your knowledge by digging int
 One thing to note, Taipy is a relatively new resource so if you have issues or encounter any roadblocks while developing, I would highly recommend you joining the [Taipy discord](https://hackp.ac/taipy-discord) and dropping your questions there. Additionally, leaving an issue on their [GitHub](https://hackp.ac/taipy-github) repository or asking a Taipy related question on Stack Overflow would be a huge help to future builders who may encounter similar problems. 
 
 If you find it useful, be sure to add a star to the Taipy GitHub repository! 
-
-
 
 * [https://hackp.ac/taipy](https://hackp.ac/taipy) - Getting Started Documentation
 * [https://hackp.ac/taipy-github](https://hackp.ac/taipy-github) - GitHub repository 
