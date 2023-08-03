@@ -64,6 +64,8 @@ A window should have launched at 127.0.0.1:5001 similar to the picture.
 
 Go ahead and make some small changes to the page output like removing the asterisks or changing the words, and refresh your browser page. You should see those changes reflected. 
 
+<img src="images/Taipy_picture1.png" height="50%">
+
 Pretty basic stuff so far but we’re now 100% sure that our environment setup is fully functional. 
 
 **Quick tip:** If you’ve shut down your Python script and have some issues with your target port being in use when running your script again, you can download the _killport_ library to make clearing out your target port simpler. 
