@@ -246,7 +246,7 @@ Gui(page, css_file = 'main.css').run(use_reloader=True, port=5001)
 
 The first thing you’ll notice is that we’ve added the layout element. Everything we place into the layout element will now be broken out into 3 equally distributed columns. Changing the values of the column key will edit the distribution of each column in your layout. 
 
-Next, I’ve placed all of my sliders into container elements, and I’ve also associated each of those container elements with the container-styling CSS class that we wrote earlier. I then labeled each container with an h3 (heading3) that will differentiate each container from the other. Finally, I imported my main.css file into my python file at the bottom of the page, as a Gui property, allowing me to successfully reference and utilize the container-styling class. 
+Next, I’ve placed all of my sliders into container elements, and I’ve also associated each of those container elements with the container-styling CSS class that we wrote earlier. I then labeled each container with an h3 (heading3) that will differentiate each container from the other. Finally, I imported my main.css file into my python file at the bottom of the page as a Gui property, allowing me to successfully reference and utilize the container-styling class. 
 
 The results should be as pictured.
 
@@ -256,10 +256,10 @@ You can go back and add additional variables to your own code so that each of th
 
 You can check out more [styling](https://docs.taipy.io/en/latest/manuals/gui/styling/) and [layout](https://docs.taipy.io/en/latest/manuals/gui/viselements/layout/) tips in the Taipy documentation. 
 
-Next, I’ll show you how to break your page out into sections.  \
+Next, I’ll show you how to break your page out into sections. 
 
 
-While having individual columns is very useful, you may want to employ a varied grid format in your application so adding sections to your page layout can be very useful.
+While having individual columns is very useful you may want to use multiple grid formats in your application, so adding sections to your page layout can be very useful.
 
 First, let’s change the way we’re declaring our page parameter at the bottom of our main.py file. 
 
@@ -325,17 +325,17 @@ section2 = """
 """
 content = "average_age.csv"
 ```
-As you can see, I placed the file_download button into it’s own container and created a new variable that points to our csv file path. I’ve also broken the section out into two separate columns with the file_download button taking up 20% and the bar chart taking up 80%. 
+In this step, I placed the file_download button into it’s own container and created a new variable that points to our csv file path. I’ve also broken the section out into two separate columns with the file_download button taking up 20% and the bar chart taking up 80%. 
 
 The results should look like this: 
 
 <img src="images/Taipy_picture7.png" height="50%">
 
-Amazing. We really got so much accomplished in a matter of minutes!
+Amazing. We really accomplished so much in just a matter of minutes!
 
 ## Recap
 
-Now that we’ve learned how to set up our Taipy dev environment, built out some awesome visual elements and controls, and understand how to style and customize our pages, the only logical next step is to take our Taipy skills to the next level with a completely original project. 
+Now that we’ve learned how to set up our Taipy dev environment, built out some awesome visual elements and controls, and developed an understanding for styling and customizing our pages, the only logical next step is to take our Taipy skills to the next level with a completely original project. 
 
 You can take what you already know and expand upon your knowledge by digging into the resources linked below. In addition, if you want a solid resource for building out your own data dashboard, check out this video on the [Taipy Youtube channel](https://www.youtube.com/watch?v=0KlZ3IDFJz4&t=1s&ab_channel=Taipy) (which this tutorial was based on). 
 
