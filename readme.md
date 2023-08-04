@@ -240,19 +240,19 @@ def get_data(path: str):
 
 data = get_data("average_age.csv")
 
-Gui(page, css_file = 'main.css').run(use_reloader=True, port=5001)
+Gui(page).run(use_reloader=True, port=5001)
 ```
 
 
 The first thing you’ll notice is that we’ve added the layout element. Everything we place into the layout element will now be broken out into 3 equally distributed columns. Changing the values of the column key will edit the distribution of each column in your layout. 
 
-Next, I’ve placed all of my sliders into container elements, and I’ve also associated each of those container elements with the container-styling CSS class that we wrote earlier. I then labeled each container with an h3 (heading3) that will differentiate each container from the other. Finally, I imported my main.css file into my Python file at the bottom of the page as a Gui property, allowing me to successfully reference and utilize the container-styling class. 
+Next, I’ve placed all of my sliders into container elements, and I’ve also associated each of those container elements with the container-styling CSS class that we wrote earlier. I then labeled each container with an h3 (heading3) that will differentiate each container from the other. Finally, there was no need for me to add my CSS file as a Gui property since I named it main.css. Taipy intuitively links the main.py and main.css files, allowing me to successfully reference and utilize the container-styling class. 
 
 The results should be as pictured.
 
 <img src="images/Taipy_picture6.png" height="50%">
 
-You can go back and add additional variables to your own code so that each of the sliders can have different dynamic values. For now, you can see that using Taipy’s built in layout element along with containers can come in very handy when it comes to optimizing your application UI. 
+You can go back and add additional variables to your own code so that each of the sliders can have different dynamic values. For now, you can see that using Taipy’s built-in layout element along with containers can come in very handy when it comes to optimizing your application UI. 
 
 You can check out more [styling](https://docs.taipy.io/en/latest/manuals/gui/styling/) and [layout](https://docs.taipy.io/en/latest/manuals/gui/viselements/layout/) tips in the Taipy documentation. 
 
@@ -267,7 +267,7 @@ First, let’s change the way we’re declaring our page parameter at the bottom
 Gui(page=section1+section2, css_file = 'main.css').run(use_reloader=True, port=5001)
 ```
 
-As you can see, we’re adding a section1 and a section2 to our application. 
+Here, we’ve added a section1 and a section2 to our application. 
 
 Next, let’s change the original page variable we declared to section1 and add a new variable named section2 right beneath it. 
 
@@ -325,7 +325,7 @@ section2 = """
 """
 content = "average_age.csv"
 ```
-In this step, I placed the file_download button into it’s own container and created a new variable that points to our csv file path. I’ve also broken the section out into two separate columns with the file_download button taking up 20% and the bar chart taking up 80%. 
+In this step, I placed the file_download button into it’s own container and created a new variable that points to our CSV file path. I’ve also broken the section out into two separate columns with the file_download button taking up 20% and the bar chart taking up 80%. 
 
 The results should look like this: 
 
@@ -339,7 +339,7 @@ Now that we’ve learned how to set up our Taipy dev environment, built out some
 
 You can take what you already know and expand upon your knowledge by digging into the resources linked below. In addition, if you want a solid resource for building out your own data dashboard, check out this video on the [Taipy Youtube channel](https://www.youtube.com/watch?v=0KlZ3IDFJz4&t=1s&ab_channel=Taipy) (which this tutorial was based on). 
 
-One thing to note, Taipy is a relatively new resource so if you have issues or encounter any roadblocks while developing, I would highly recommend you joining the [Taipy discord](https://hackp.ac/taipy-discord) and dropping your questions there. Additionally, leaving an issue on their [GitHub](https://hackp.ac/taipy-github) repository or asking a Taipy related question on Stack Overflow would be a huge help to future builders who may encounter similar problems. 
+One thing to note, Taipy is a relatively new resource so if you have issues or encounter any roadblocks while developing, I would highly recommend you join the [Taipy discord](https://hackp.ac/taipy-discord) and drop your questions there. Additionally, leaving an issue on their [GitHub](https://hackp.ac/taipy-github) repository or asking a Taipy-related question on Stack Overflow would be a huge help to future builders who may encounter similar problems. 
 
 If you find it useful, be sure to add a star to the Taipy GitHub repository! 
 
