@@ -3,15 +3,15 @@
 
 ## Overview
 
-[Taipy](https://hackp.ac/Taipy) is an open-source **Python** library used for creating full stack web applications using only Python code! It’s both easy to install and use, employing simple syntax that allows you to leverage pre-built components and features, saving you significant development time. 
+[Taipy](https://hackp.ac/Taipy) is an open-source **Python** library used for creating full-stack web applications in no time using only Python code! It’s both easy to install and use, employing simple syntax that allows you to leverage pre-built components and features, saving you significant development time. 
 
-In the next 10 - 15 minutes, you’ll learn how to leverage Taipy GUI to build a simple application using some of Taipy’s built in elements like charts and sliders, along with some styling and layout features that should get you well on your way to creating applications of your own! 
+In the next 10 - 15 minutes, you’ll learn how to leverage Taipy GUI to build a simple web application using some of Taipy’s built-in elements like charts and sliders, along with some styling and layout features that should get you well on your way to creating applications of your own! 
 
-Before we get started, please note that the Taipy package requires[ Python 3.8 or newer](https://www.python.org/downloads/). It’s also recommended that you have [pip](https://pip.pypa.io/en/stable/installation/) installed for the sake of downloading packages. 
+Before we get started, please note that the Taipy package requires[ Python 3.8 or newer](https://www.Python.org/downloads/). It’s also recommended that you have [pip](https://pip.pypa.io/en/stable/installation/) installed for the sake of downloading packages. 
 
 ## Setting up your Environment
 
-First things first, let’s get our environment setup. 
+First things first, let’s get our environment set up. 
 
 Open up a terminal and follow along with the command prompts. 
 
@@ -36,37 +36,37 @@ We’re going to check our browser connection with our Taipy project using a sim
 
 At the top of your main.py file, go ahead and input the following code. 
 
-```python
+```Python
 from Taipy import Gui
 
 Gui(page="Hello *World*").run(use_reloader=True, port=5001)
 ```
 
-As you can see, we’re importing Gui from the Taipy library to start. We then create a new Gui object that defines the _page_ and _run_ parameters. These two parameters will be important as we proceed, since they essentially dictate the way your web application will behave and the content it will display. 
+As you can see, we’re importing Gui from the Taipy library to start. We then create a new Gui object that defines the **_page_** and **_run_** parameters. These two parameters will be important as we proceed, since they essentially dictate the way your web application will behave and the content it will display. 
 
-Here we are assigning a simple string value to the page key. Notice the asterisks around “World.” This will behave similarly to markdown, _italicizing_ whatever string we have surrounded by the asterisks. You will find that Taipy has cleverly built in the use of both markdown and HTML syntax to make using their library more intuitive and simple. 
+Here we are assigning a simple string value to the page key. Notice the asterisks around “World.” This will behave similarly to Markdown, _italicizing_ whatever string we have surrounded by the asterisks. You will find that Taipy has cleverly built in the use of both Markdown and HTML syntax to make using their library more intuitive and simple. 
 
 For the run parameter, you’ll see that we are manually assigning a port and using the reloader functionality to update our local web application whenever we refresh the browser. 
 
-Go ahead and jump into your terminal window and run your python script. 
+Go ahead and jump into your terminal window and run your Python script. 
 
 ```
-python main.py 
+Python main.py 
 
 OR
 
-python3 main.py 
+Python3 main.py 
 
-#This will depend on your initial python configuration. If you currently have python aliased to python3, the python command will automatically launch the main.py file using the latest version of Python you have installed. 
+#This will depend on your initial Python configuration. If you currently have Python aliased to Python3, the Python command will automatically launch the main.py file using the latest version of Python you have installed. 
 ```
 
-A window should have launched at 127.0.0.1:5001 similar to the picture.  
+A window should have launched at 127.0.0.1:5001, similar to the picture.  
 
-Go ahead and make some small changes to the page output like removing the asterisks or changing the words, and refresh your browser page. You should see those changes reflected. 
+Go ahead and make some small changes to the page output, like removing the asterisks or changing the words, and refresh your browser page. You should see those changes reflected. 
 
 <img src="images/Taipy_picture1.png" height="50%">
 
-Pretty basic stuff so far but we’re now 100% sure that our environment setup is fully functional. 
+Pretty basic stuff so far, but we’re now 100% sure that our environment setup is fully functional. 
 
 **Quick tip:** If you’ve shut down your Python script and have some issues with your target port being in use when running your script again, you can download the _killport_ library to make clearing out your target port simpler. 
 
@@ -82,11 +82,11 @@ Now that we’ve got our first Taipy project up and running, let’s make it a l
 
 Taipy has conveniently built out some great features that we can easily access with using Taipy Gui.  To start, let’s create a page title. 
 
-Remember, we can use [HTML](https://docs.taipy.io/en/latest/manuals/gui/pages/#using-html) or [Markdown](https://docs.taipy.io/en/latest/manuals/gui/pages/#using-markdown) syntax to define our page elements, which should make building out our application incredibly simple. 
+Remember, we can use [HTML](https://docs.taipy.io/en/latest/manuals/gui/pages/#using-html) or [Markdown](https://docs.taipy.io/en/latest/manuals/gui/pages/#using-Markdown) syntax to define our page elements, which should simplify building our application.  
 
-Below, you’ll see that we’re now instantiating a page variable. Your page variable value will always be encapsulated by **three sets of quotation marks**, and everything within those quotation marks will be displayed in your application. Here, I’m using some markdown to define the page’s H1 title. 
+Below, you’ll see that we’re now instantiating a page variable. Your page variable value will always be encapsulated by **three sets of quotation marks**, and everything within those quotation marks will be displayed in your application. Here, I’m using some Markdown to define the page’s H1 title. 
 
-```python
+```Python
 from taipy.gui import Gui
 
 page = """
@@ -98,9 +98,9 @@ Gui(page).run(use_reloader=True, port=5001)
 
 Next, let’s add a dynamic value. Here, we’ll use a slider that will also correspond with a dynamic value within our code. First, we’ll define a value variable and set it to 10. 
 
-Next, we’ll write out a simple label for slider, that will also display the dynamic value as the slider is moved back and forth. Lastly, we’ll use the slider visual control and assign it the same dynamic value. (Notice the use of the self closing br tag. This will break our slider out to the next line). 
+Next, we’ll write out a simple label for the slider, that will also display the dynamic value as the slider is moved back and forth. Lastly, we’ll use the slider visual control and assign it the same dynamic value. (Notice the use of the self-closing br tag. This will break our slider out to the next line). 
 
-```python
+```Python
 from taipy.gui import Gui
 
 value = 10
@@ -127,11 +127,11 @@ For the sake of this demo, I found a small dataset that displays the average age
 
 <img src="images/Taipy_picture3.png" height="50%">
 
-First thing’s first, I’m going to move my average_age.csv into my projects folder. I’m keeping it at the top level for the sake of simplicity but you can move yours wherever you please. Just be sure to note the path correctly in the upcoming steps. 
+First things first, I’m going to move my average_age.csv into my projects folder. I’m keeping it at the top level for the sake of simplicity, but you can move yours wherever you please. Just be sure to note the path correctly in the upcoming steps. 
 
-We’ll be using pandas to read the csv and the Taipy chart visual control to visualize the data. Go ahead and add the new code to your project. 
+We’ll be using Pandas to read the CSV and the Taipy chart visual control to visualize the data. Go ahead and add the new code to your project. 
 
-```python
+```Python
 from taipy.gui import Gui
 import pandas as pd
 
@@ -143,7 +143,7 @@ page = """
 Slider value: <|{value}|> <br/>
 <|{value}|slider|>
 
-<|{data}|chart|type=bar|x=Country|y=Average Age|orientation=v|>
+<|{data}|chart|type=bar|x=Country|y=Average Age|>
 """
 
 def get_data(path: str):
@@ -155,9 +155,9 @@ data = get_data("average_age.csv")
 Gui(page).run(use_reloader=True, port=5001)
 ```
 
-After importing the pandas library, we’re defining a function that reads our csv and returns the data. We then instantiate a variable that passes the csv’s file path to our function.
+After importing the pandas library, we’re defining a function that reads our CSV and returns the data. We then instantiate a variable that passes the CSV’s file path to our function.
 
-Next, we create the chart visual control in our page, passing in our dynamic data value, our x and y labels, and making the chart orientation vertical. Let’s run our code and see the results! 
+Next, we create the chart visual control in our page, passing in our dynamic data value, and our x and y labels. Let’s run our code and see the results! 
 
 <img src="images/Taipy_picture4.png" height="50%">
 
@@ -176,7 +176,7 @@ As you continue to build your application, you may find that you want to further
 
 I’m not going to lie, I think that looks pretty good. Let’s say, however, that you wanted all of your sliders side by side and each of them to have a different background. 
 
-Well the first thing we’re going to do is jump into our main.css file and build out a new class. 
+Well, the first thing we’re going to do is jump into our main.css file and build out a new class. 
 
 ```css
 .container-styling{
@@ -195,7 +195,7 @@ We’re going to use this class to place some of our components into containers.
 
 Go ahead and implement the code below: 
 
-```python
+```Python
 from taipy.gui import Gui
 import pandas as pd
 
@@ -246,7 +246,7 @@ Gui(page, css_file = 'main.css').run(use_reloader=True, port=5001)
 
 The first thing you’ll notice is that we’ve added the layout element. Everything we place into the layout element will now be broken out into 3 equally distributed columns. Changing the values of the column key will edit the distribution of each column in your layout. 
 
-Next, I’ve placed all of my sliders into container elements, and I’ve also associated each of those container elements with the container-styling CSS class that we wrote earlier. I then labeled each container with an h3 (heading3) that will differentiate each container from the other. Finally, I imported my main.css file into my python file at the bottom of the page as a Gui property, allowing me to successfully reference and utilize the container-styling class. 
+Next, I’ve placed all of my sliders into container elements, and I’ve also associated each of those container elements with the container-styling CSS class that we wrote earlier. I then labeled each container with an h3 (heading3) that will differentiate each container from the other. Finally, I imported my main.css file into my Python file at the bottom of the page as a Gui property, allowing me to successfully reference and utilize the container-styling class. 
 
 The results should be as pictured.
 
@@ -263,7 +263,7 @@ While having individual columns is very useful you may want to use multiple grid
 
 First, let’s change the way we’re declaring our page parameter at the bottom of our main.py file. 
 
-```python
+```Python
 Gui(page=section1+section2, css_file = 'main.css').run(use_reloader=True, port=5001)
 ```
 
@@ -271,7 +271,7 @@ As you can see, we’re adding a section1 and a section2 to our application.
 
 Next, let’s change the original page variable we declared to section1 and add a new variable named section2 right beneath it. 
 
-```python
+```Python
 section1 = """
 #Our Very First Taipy Application
 
@@ -311,7 +311,7 @@ I went ahead and moved our chart to the new section as well. Each of these new s
 
 Just for fun, let’s go ahead and add a download button to section2 so that our chart doesn’t get lonely. We’ll enable the button so that it allows someone to download our dataset directly from the application. 
 
-```python
+```Python
 section2 = """
 <|layout|columns=1 4|
 
